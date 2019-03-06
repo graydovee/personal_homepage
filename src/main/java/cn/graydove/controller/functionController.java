@@ -48,6 +48,7 @@ public class functionController {
     public String login_(User user, @RequestParam(value = "verification_code",required = false) String verificationCode, @RequestParam(value = "remember", required = false) List<String> list, HttpServletRequest request, HttpServletResponse response){
         String code = (String)request.getSession().getAttribute("code");
         user.setLastIp(ServletUtil.getIPAddress(request));
+        user.setPassword(ServletUtil.MD5(user.getPassword()));
         if(code!=null && code.equals(verificationCode)){
             User u = userServiceImpl.login(user);
             //登录成功
@@ -137,6 +138,7 @@ public class functionController {
         String code = (String)session.getAttribute("code");
         if(code!=null && code.equals(verificationCode)){
             user.setRid(1);
+            user.setPassword(ServletUtil.MD5(user.getPassword()));
             int count = userServiceImpl.insUser(user);
             if(count>0){
                 return StateUtil.OK;

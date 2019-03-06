@@ -1,6 +1,9 @@
 package cn.graydove.util;
 
 import javax.servlet.http.HttpServletRequest;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class ServletUtil {
     private ServletUtil(){
@@ -43,5 +46,27 @@ public class ServletUtil {
             ip = request.getRemoteAddr();
         }
         return ip;
+    }
+
+    public static String MD5(String plainText){
+        byte[] bytes = null;
+        try {
+            // 生成一个MD5加密计算摘要
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            //对字符串进行加密
+            md.update(plainText.getBytes());
+            //获得加密后的数据
+            bytes = md.digest();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
+        //将加密后的数据转换为16进制数字
+        String md5code = new BigInteger(1, bytes).toString(16);// 16进制数字
+        // 如果生成数字未满32位，需要前面补0
+        for (int i = 0; i < 32 - md5code.length(); i++) {
+            md5code = "0" + md5code;
+        }
+        return md5code;
     }
 }
