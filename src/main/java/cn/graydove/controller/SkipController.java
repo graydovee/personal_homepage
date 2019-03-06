@@ -22,7 +22,7 @@ public class SkipController {
     @RequestMapping("/index")
     public String index(HttpServletRequest request){
         //项目路径
-        request.setAttribute("path",request.getServletContext().getContextPath());
+        request.setAttribute("path",request.getContextPath());
 
         Cookie[] cookies = request.getCookies();
         String username = null;
