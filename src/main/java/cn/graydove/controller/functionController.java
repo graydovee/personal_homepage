@@ -78,6 +78,7 @@ public class functionController {
 
     @RequestMapping("verification_code")
     public void verificationCode(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        resp.setHeader("Cache-Control","no-store");
         //创建一张图片
         BufferedImage image = new BufferedImage(200, 100, BufferedImage.TYPE_INT_BGR);
 

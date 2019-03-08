@@ -235,13 +235,13 @@
         <plugin>
           <groupId>org.apache.tomcat.maven</groupId>
           <artifactId>tomcat7-maven-plugin</artifactId>
-          <version>2.1</version>
+          <version>2.2</version>
           <configuration>
             <port>80</port>
-            <path>/homepage</path>
+            <path>/</path>
             <username>tomcat</username>
             <password>tomcat</password>
-            <url>http://graydove.cn:8080/manager/text</url>
+            <url>http://homepage.graydove.cn/manager/text</url>
           </configuration>
         </plugin>
 
