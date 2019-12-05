@@ -22,25 +22,8 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-      <version>4.1.6.RELEASE</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
       <version>4.12</version>
       <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>cn.graydove</groupId>
-      <artifactId>spider</artifactId>
-      <version>1.0-SNAPSHOT</version>
     </dependency>
 
     <!-- spring -->
@@ -116,19 +99,6 @@
     </dependency>
 
 
-    <!-- 数据源 -->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>druid</artifactId>
-      <version>1.0.12</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjweaver</artifactId>
-      <version>1.8.4</version>
-    </dependency>
-
     <!-- log4j -->
     <dependency>
       <groupId>log4j</groupId>
@@ -151,17 +121,6 @@
     </dependency>
 
     <!-- json -->
-    <dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-mapper-asl</artifactId>
-      <version>1.9.13</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>1.2.31</version>
-    </dependency>
 
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
@@ -195,7 +154,7 @@
   </dependencies>
 
   <build>
-    <finalName>novel</finalName>
+    <finalName>homepage</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
@@ -231,20 +190,6 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.6</version>
         </plugin>
-
-        <plugin>
-          <groupId>org.apache.tomcat.maven</groupId>
-          <artifactId>tomcat7-maven-plugin</artifactId>
-          <version>2.2</version>
-          <configuration>
-            <port>80</port>
-            <path>/</path>
-            <username>tomcat</username>
-            <password>tomcat</password>
-            <url>http://homepage.graydove.cn/manager/text</url>
-          </configuration>
-        </plugin>
-
       </plugins>
     </pluginManagement>
   </build>

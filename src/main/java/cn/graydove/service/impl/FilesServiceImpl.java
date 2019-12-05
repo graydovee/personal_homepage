@@ -3,15 +3,15 @@ package cn.graydove.service.impl;
 import cn.graydove.mapper.FilesMapper;
 import cn.graydove.pojo.Files;
 import cn.graydove.service.FilesService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class FilesServiceImpl implements FilesService {
 
-    @Resource
+    @Autowired
     private FilesMapper filesMapper;
 
     @Override

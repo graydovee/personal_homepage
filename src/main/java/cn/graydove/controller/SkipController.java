@@ -4,19 +4,19 @@ import cn.graydove.pojo.User;
 import cn.graydove.service.FilesService;
 import cn.graydove.service.UserService;
 import cn.graydove.util.ServletUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class SkipController {
-    @Resource
+    @Autowired
     private UserService userServiceImpl;
 
-    @Resource
+    @Autowired
     private FilesService filesServiceImpl;
 
     @RequestMapping("/index")
