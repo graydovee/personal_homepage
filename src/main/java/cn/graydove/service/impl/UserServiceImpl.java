@@ -4,22 +4,22 @@ import cn.graydove.mapper.*;
 import cn.graydove.pojo.Files;
 import cn.graydove.pojo.User;
 import cn.graydove.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
 @Service
 public class UserServiceImpl implements UserService {
-    @Resource
+    @Autowired
     private UserMapper userMapper;
 
-    @Resource
+    @Autowired
     private WebsiteMapper websiteMapper;
 
-    @Resource
+    @Autowired
     private UrlMapper urlMapper;
 
-    @Resource
+    @Autowired
     private ElementMapper elementMapper;
 
     @Override

@@ -10,13 +10,13 @@ import cn.graydove.util.ServletUtil;
 import cn.graydove.util.StateUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.*;
@@ -34,13 +34,13 @@ import java.util.UUID;
 
 @Controller
 public class functionController {
-    @Resource
+    @Autowired
     private UserService userServiceImpl;
 
-    @Resource
+    @Autowired
     private WebsiteService websiteServiceImpl;
 
-    @Resource
+    @Autowired
     private FilesService filesServiceImpl;
 
     @ResponseBody
