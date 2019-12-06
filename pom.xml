@@ -26,6 +26,12 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.8.4</version>
+    </dependency>
+
     <!-- spring -->
     <dependency>
       <groupId>org.springframework</groupId>
